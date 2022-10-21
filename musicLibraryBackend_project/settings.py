@@ -20,9 +20,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 
-CORS_ORIGIN_ALLOW_ALL=True
-
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -37,6 +34,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "musicLibraryBackend",
+    "rest_framework",
     "corsheaders",
 ]
 
@@ -70,8 +69,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "musicLibraryBackend_project.wsgi.application"
-
-
 
 
 
@@ -116,7 +113,9 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+CORS_ORIGIN_ALLOW_ALL=True
+
 try:
-    from musicLibraryBackend_project.local_setting import *
+    from local_settings import *
 except ImportError:
     pass
