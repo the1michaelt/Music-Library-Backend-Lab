@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "musicLibraryBackend",
+    "songs",
     "rest_framework",
     "corsheaders",
 ]
@@ -116,6 +116,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CORS_ORIGIN_ALLOW_ALL=True
 
 try:
-    from local_settings import *
+    from musicLibraryBackend_project.local_settings import *
 except ImportError:
     pass

@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class MusiclibrarybackendConfig(AppConfig):
+class SongsConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "musicLibraryBackend"
+    name = "songs"
